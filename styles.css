@@ -9,11 +9,11 @@ body {
   line-height: 1.5;
 
   --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
+  --secondary-text-color: #004a14;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+
+  --text-decoration-color: #000000;
 }
 
 .container {
@@ -43,9 +43,20 @@ body {
 }
 
 .resume__block {
-  border-bottom: 3px solid var(--border-color);
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   margin-bottom: 15px;
+}
+
+.resume__header {
+  padding-bottom: 16px;
+}
+
+.contact_info_container {
+  margin-bottom: 20px;
+}
+
+.contact-info__block:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -67,9 +78,19 @@ body {
   }
 }
 
+.resume_bar {
+  padding: 16px 0;
+  background-color: #056e0042;
+}
+
 .contact-info__header,
 .contact-info__sub-header {
   text-align: center;
+}
+.resume_main_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .contact-info__header {
@@ -122,12 +143,12 @@ body {
 }
 
 .contact-info__avatar {
+  margin: 0 auto;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border: 3px solid;
-  border-color: var(--text-decoration-color);
+  border: 2px solid;
 }
 
 .intro {
@@ -152,18 +173,22 @@ body {
 }
 
 .intro_text {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-align: justify;
 }
 
+.skills__block {
+  margin-bottom: 30px;
+}
+
 .skills__header {
+  font-weight: 700;
   color: var(--secondary-text-color);
-  text-align: center;
   margin-bottom: 15px;
 }
 
 .skills__text {
-  color: var(--secondary-text-color);
+  color: var(--text-decoration-color);
   text-align: justify;
 }
 
@@ -181,8 +206,12 @@ body {
 .experiences__company-header-durability {
   color: var(--durability-text-color);
   text-align: left;
-  margin-bottom: 10px;
   font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.experiences__position {
+  margin-bottom: 10px;
 }
 
 .experiences__company-header-name {
@@ -233,7 +262,6 @@ body {
 .additional-info__education-university-durability {
   color: var(--durability-text-color);
   text-align: left;
-  margin-bottom: 10px;
   font-size: 15px;
 }
 
